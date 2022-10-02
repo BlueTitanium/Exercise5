@@ -91,7 +91,7 @@ public class EnemyScript : MonoBehaviour
                     target = hit.transform.gameObject;
                     transform.LookAt(target.transform);
                 }
-                else if (hit.transform.gameObject.CompareTag("EnemyProjectile"))
+                else if (hit.transform.gameObject.CompareTag("EnemyProjectile") && target != null)
                 {
                     transform.LookAt(target.transform);
                 }
@@ -115,6 +115,12 @@ public class EnemyScript : MonoBehaviour
         if (other.gameObject.CompareTag("PlayerAttack"))
         {
             hp -= 1;
+            GameObject.FindObjectOfType<CameraFollow>().shakeDuration = .15f;
+            curTime = LoseTrackTime;
+            shouldPatrol = false;
+            isPatrolling = false;
+            target = GameObject.FindGameObjectWithTag("Player");
+            transform.LookAt(target.transform);
         }
     }
     void PatrolNext()

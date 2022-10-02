@@ -21,6 +21,7 @@ public class EnemyTakedownScript : MonoBehaviour
         if (canKill && (Input.GetMouseButtonDown(1)))
         {
             kill();
+            GameObject.FindObjectOfType<CameraFollow>().shakeDuration = .15f;
         }
     }
     void kill()
@@ -35,6 +36,7 @@ public class EnemyTakedownScript : MonoBehaviour
             text.SetActive(true);
             canKill = true;
             //kill();
+
         }
     }
     private void OnTriggerStay(Collider other)

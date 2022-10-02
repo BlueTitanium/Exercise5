@@ -7,11 +7,13 @@ TagManager:
   - PlayerAttack
   - Enemy
   - EnemyProjectile
+  - LevelManager
+  - Checkpoint
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Environment
   - Water
   - UI
   - 

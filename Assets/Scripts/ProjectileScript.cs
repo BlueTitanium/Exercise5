@@ -28,7 +28,7 @@ public class ProjectileScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerController>().Die();
+            collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
         }
     }
 
