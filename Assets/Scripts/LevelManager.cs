@@ -25,6 +25,9 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (currentLevelName != SceneManager.GetActiveScene().name)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
