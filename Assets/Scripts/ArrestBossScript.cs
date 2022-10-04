@@ -23,6 +23,7 @@ public class ArrestBossScript : MonoBehaviour
     }
     public void collect()
     {
+        FindObjectOfType<LevelManager>().DestroyLM();
         SceneManager.LoadScene(finalSceneName);
     }
 

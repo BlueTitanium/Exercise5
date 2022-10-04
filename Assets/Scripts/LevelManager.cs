@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         GameObject[] objects = GameObject.FindGameObjectsWithTag("LevelManager");
-        if (objects.Length > 1 || currentLevelName != SceneManager.GetActiveScene().name)
+        if (objects.Length > 1)
         {
             Destroy(this.gameObject);
         }
@@ -29,5 +29,10 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+
+    public void DestroyLM()
+    {
+        Destroy(this.gameObject);
     }
 }
