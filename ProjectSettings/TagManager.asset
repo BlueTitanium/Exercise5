@@ -9,6 +9,9 @@ TagManager:
   - EnemyProjectile
   - LevelManager
   - Checkpoint
+  - Boss
+  - BossAttack
+  - BossCharge
   layers:
   - Default
   - TransparentFX

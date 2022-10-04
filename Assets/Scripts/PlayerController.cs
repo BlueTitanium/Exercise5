@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public AnimationClip a1;
     public AnimationClip a2;
     public AnimationClip walk;
+
+    public ParticleSystem getHit = null;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -24,6 +26,7 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = lm.checkPoint;
         }
+
     }
 
     public void Die()
@@ -34,12 +37,18 @@ public class PlayerController : MonoBehaviour
         GameObject.FindObjectOfType<GameManager>().ShowDeathScreen();
         
     }
-    public void TakeDamage(float amt)
+    public void TakeDamage(float amt, float sd = .3f)
     {
+
+
         if(hp > 0)
         {
             hp -= amt;
-            GameObject.FindObjectOfType<CameraFollow>().shakeDuration = .3f;
+            GameObject.FindObjectOfType<CameraFollow>().shakeDuration = sd;
+            if(getHit != null)
+            {
+                getHit.Play();
+            }
         }
         
         if(hp <= 0)
@@ -93,6 +102,18 @@ public class PlayerController : MonoBehaviour
             anim.Play();
         }
         anim1Or2 = !anim1Or2;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("BossAttack"))
+        {
+            TakeDamage(1f);
+        }
+        if (other.gameObject.CompareTag("BossCharge"))
+        {
+            TakeDamage(3f,.5f);
+        }
     }
 
 }
