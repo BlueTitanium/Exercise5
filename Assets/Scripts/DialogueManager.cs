@@ -3,25 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro; 
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 
 public class DialogueManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogueText;
-    // public Dialogue dialogue; 
 
     private Queue<string> sentences;
+////////
+    public Dialogue dialogue;
+    public bool isTriggered = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        // FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
         sentences = new Queue<string>();
-        
     }
 
-
+    // Starting the Dialogue
     public void StartDialogue(Dialogue dialogue)
     {
         Debug.Log("Starting conversation with " + dialogue.name);
@@ -38,6 +39,7 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
     }
 
+    // Display the next lines
     public void DisplayNextSentence()
     {
         if(sentences.Count == 0) 
@@ -47,13 +49,17 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue();
-        // Debug.Log(sentence);
+        Debug.Log(sentence);
         dialogueText.text = sentence;
 
     }
 
+    // reached the end
     void EndDialogue()
     {
+        // move to stage 1 scene: update later
+        // SceneManager.LoadScene("SceneOne");
+
         Debug.Log("End of Conversation");
     }
 

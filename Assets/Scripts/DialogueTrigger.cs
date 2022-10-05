@@ -5,10 +5,23 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
+    public bool isTriggered = false ;
 
     public void TriggerDialogue()
     {   
-        // tell what conversation to start
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        // when first clicked; start the dialogue
+        if(!isTriggered)
+        {
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            isTriggered = true; 
+        }
+        // after the first round, show the next line
+        else
+        {
+            FindObjectOfType<DialogueManager>().DisplayNextSentence();
+        }
+        
     }
+
+
 } 
