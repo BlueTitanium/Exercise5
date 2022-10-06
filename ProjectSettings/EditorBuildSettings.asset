@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 56b95a81e5ed4954c99e56eb2493473c
   - enabled: 1
-    path: Assets/Scenes/TestScenes/Dialogue.unity
-    guid: 7961668cfdec3443c8993ea24e450a26
+    path: Assets/Scenes/Warehouse.unity
+    guid: 2585d1c9c941442458a46b73b391438f
+  - enabled: 1
+    path: Assets/Scenes/Parking Lot Scene.unity
+    guid: ab539d0ad6fc5e14ca417416a674f428
+  - enabled: 1
+    path: Assets/Scenes/Boss' Headquarters.unity
+    guid: 66df835388e434346852ed54fea99087
   m_configObjects: {}
