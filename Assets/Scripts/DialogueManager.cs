@@ -16,6 +16,8 @@ public class DialogueManager : MonoBehaviour
     public Dialogue dialogue;
     public bool isTriggered = false;
 
+    public string levelName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -58,7 +60,8 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         // move to stage 1 scene: update later
-        // SceneManager.LoadScene("SceneOne");
+        Debug.Log(levelName);
+        SceneManager.LoadScene(levelName);
 
         Debug.Log("End of Conversation");
     }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -307,10 +307,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -650,8 +650,8 @@ RectTransform:
   m_GameObject: {fileID: 1075897157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.8, y: 2.8, z: 2.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 159317859}
   - {fileID: 1313024077}
@@ -661,7 +661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 1, y: 88}
+  m_AnchoredPosition: {x: 1, y: 179}
   m_SizeDelta: {x: 432.5483, y: 116}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1075897159
@@ -798,6 +798,7 @@ MonoBehaviour:
     name: 
     sentences: []
   isTriggered: 0
+  levelName: TaneimTesting
 --- !u!1 &1082101923
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,8 +902,8 @@ RectTransform:
   m_GameObject: {fileID: 1144867597}
   m_LocalRotation: {x: -0, y: -0, z: 0.15548962, w: 0.98783755}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.06, y: 1.06, z: 1.5142857}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 418607428}
   m_RootOrder: 2
@@ -1214,7 +1215,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1358277840
 Transform:
   m_ObjectHideFlags: 0
@@ -1248,6 +1249,7 @@ MonoBehaviour:
     name: 
     sentences: []
   isTriggered: 0
+  levelName: Dialogue
 --- !u!1 &1426262236
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1378,8 @@ AudioSource:
   m_GameObject: {fileID: 1426262236}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4430765329562367348, guid: 16f6b437388b0204ab9b81d91c010d95,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 2c5a9b204e1c849f28cb2dad96a5bdc7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
