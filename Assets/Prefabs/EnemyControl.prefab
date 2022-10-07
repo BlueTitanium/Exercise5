@@ -556,7 +556,7 @@ MonoBehaviour:
   shootTime: 0
   shootCD: 2
   alive: 1
-  hp: 2
+  hp: 8
 --- !u!33 &7985018656353071385
 MeshFilter:
   m_ObjectHideFlags: 0

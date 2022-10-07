@@ -66,6 +66,10 @@ public class BossController : MonoBehaviour
     public GameObject arrestTrigger;
 
     public ParticleSystem getHit = null;
+
+    public GameObject dialogueBox;
+    public bool isContinuing = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,8 +77,20 @@ public class BossController : MonoBehaviour
         agent.speed = followSpeed;
         showUI.SetActive(false);
         arrestTrigger.SetActive(false);
+        dialogueBox.SetActive(false);
     }
-
+    public void ShowDialogue()
+    {
+        Time.timeScale = 0f;
+        dialogueBox.SetActive(true);
+    }
+    public void CloseDialogue()
+    {
+        
+        Time.timeScale = 1f;
+        isContinuing = true;
+        dialogueBox.SetActive(false);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -92,6 +108,9 @@ public class BossController : MonoBehaviour
                 if(curTimeToPoint <= TimeToGetToPoint)
                 {
                     curTimeToPoint += Time.deltaTime;
+                } else if(isContinuing == false)
+                {
+                    ShowDialogue();
                 } else
                 {
                     //trigger dialogue TODO
@@ -128,7 +147,7 @@ public class BossController : MonoBehaviour
                     case ChargeStates.readying:
                         anim.clip = c1;
                         anim.Play();
-                        agent.SetDestination(transform.position);
+                        agent.SetDestination(target.transform.position);
                         transform.LookAt(target.transform);
                         if (curTime <= 0) {
                             cState = ChargeStates.preCharge;

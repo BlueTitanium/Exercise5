@@ -161,7 +161,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LAPD
+  m_text: PHONE
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 608bb4f3f825b47c09fcbd31ba8ebd70, type: 2}
   m_sharedMaterial: {fileID: 1749010906550048505, guid: 608bb4f3f825b47c09fcbd31ba8ebd70,
@@ -353,7 +353,7 @@ RectTransform:
   m_Children:
   - {fileID: 1082101924}
   - {fileID: 1075897158}
-  - {fileID: 1144867598}
+  - {fileID: 1200688508}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -362,6 +362,75 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &830537307
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8623541176743111041, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_Name
+      value: GameUtility
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623541176743111042, guid: a41580ece0a595a4585882dacc3a46ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a41580ece0a595a4585882dacc3a46ce, type: 3}
 --- !u!1 &942632263
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,14 +840,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: LAPD
+    name: LVPD Chief
     sentences:
-    - 'We just got a news that Boss is staying in the near casino. We need your help
-      to find and arrest him. '
-    - 'The car prepared in front of your house, the driver will take you to the casino. '
-    - 'His goons will be all around monitoring, so BE CAREFUL! '
-    - Also make sure to collect all the pieces of evidence that would impact badly
-      on him at the court!
+    - 'P.I. Private Investigator.
+
+      This is the Chief of Police of the Las Vegas
+      Police Department speaking.'
+    - "I know it\u2019s been a while since the LVPD\u2019s called on your services,
+      but you\u2019re the best in the business at sneaking around, and, well\u2026"
+    - 'Our informants finally nailed the location of the mob boss of the biggest
+      gang in Las Vegas, the Queenpin of the Red Hats. '
+    - The same Queenpin who killed your entire family.
+    - "She\u2019s hiding out at her warehouse right now, and we\u2019re staging an
+      operation to take her down. "
+    - We need your help to do it.
+    - The car in front of your office will take you to her location.
+    - 'Also, you must collect all the pieces of evidence you can find so we can make
+      sure her sentence is a long one. '
+    - "You\u2019re our last resort. We\u2019re all counting on you to get the Queenpin
+      behind bars."
+    - Good luck, P.I. Private Investigator.
   isTriggered: 0
 --- !u!114 &1075897164
 MonoBehaviour:
@@ -798,7 +879,7 @@ MonoBehaviour:
     name: 
     sentences: []
   isTriggered: 0
-  levelName: TaneimTesting
+  levelName: Parking Lot Scene
 --- !u!1 &1082101923
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,7 +956,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1082101923}
   m_CullTransparentMesh: 1
---- !u!1 &1144867597
+--- !u!1 &1200688507
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -883,46 +964,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1144867598}
-  - component: {fileID: 1144867600}
-  - component: {fileID: 1144867599}
-  m_Layer: 5
+  - component: {fileID: 1200688508}
+  - component: {fileID: 1200688510}
+  - component: {fileID: 1200688509}
+  m_Layer: 0
   m_Name: phone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1144867598
+--- !u!224 &1200688508
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144867597}
-  m_LocalRotation: {x: -0, y: -0, z: 0.15548962, w: 0.98783755}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.06, y: 1.06, z: 1.5142857}
-  m_ConstrainProportionsScale: 1
+  m_GameObject: {fileID: 1200688507}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
+  m_LocalScale: {x: 34.49, y: 34.49, z: 34.49}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 418607428}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 17.89}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14, y: 64}
-  m_SizeDelta: {x: 100, y: 300}
+  m_AnchoredPosition: {x: -8.531, y: 92}
+  m_SizeDelta: {x: 17.062, y: 17.062}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1144867599
+--- !u!114 &1200688509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144867597}
+  m_GameObject: {fileID: 1200688507}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -933,20 +1014,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 59e0a1a9af38f48c287627940a895078, type: 3}
-  m_UVRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
---- !u!222 &1144867600
+  m_Sprite: {fileID: 21300000, guid: c77efe49ac5566d4ab779eb7463b2afb, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1200688510
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144867597}
+  m_GameObject: {fileID: 1200688507}
   m_CullTransparentMesh: 1
 --- !u!1 &1285257932
 GameObject:
@@ -1101,7 +1185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Detective?! Wake up! This is LAPD. '
+  m_text: '*crackle crackle*'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 608bb4f3f825b47c09fcbd31ba8ebd70, type: 2}
   m_sharedMaterial: {fileID: 1749010906550048505, guid: 608bb4f3f825b47c09fcbd31ba8ebd70,
@@ -1378,9 +1462,9 @@ AudioSource:
   m_GameObject: {fileID: 1426262236}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -4430765329562367348, guid: 16f6b437388b0204ab9b81d91c010d95,
+  OutputAudioMixerGroup: {fileID: 4793635879068008742, guid: 16f6b437388b0204ab9b81d91c010d95,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 2c5a9b204e1c849f28cb2dad96a5bdc7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 49f06b1b13de0479f98443f973891920, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

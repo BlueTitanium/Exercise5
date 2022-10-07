@@ -12,6 +12,7 @@ TagManager:
   - Boss
   - BossAttack
   - BossCharge
+  - CallingCard
   layers:
   - Default
   - TransparentFX

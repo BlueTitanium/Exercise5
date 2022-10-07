@@ -36,6 +36,11 @@ public class EnemyScript : MonoBehaviour
         alive = false;
         line.enabled = false;
         yield return new WaitForSeconds(time);
+        var a = GetComponent<DropKey>();
+        if (a != null)
+        {
+            a.dropKey();
+        }
         Destroy(transform.parent.gameObject);
     }
     // Update is called once per frame
@@ -100,6 +105,12 @@ public class EnemyScript : MonoBehaviour
             {
                 line.SetPosition(1, new Vector3(0, 0, dist));
             }
+
+            if (target == null && agent.velocity == Vector3.zero)
+            {
+                StartCoroutine(CheckIfPatrolling());
+            }
+
             if ((agent.pathEndPosition.x == transform.position.x && agent.pathEndPosition.z == transform.position.z && isPatrolling) || (isPatrolling == false && shouldPatrol == true))
             {
                 agent.stoppingDistance = 0f;
@@ -110,6 +121,16 @@ public class EnemyScript : MonoBehaviour
             agent.isStopped = true ;
         }
     }
+
+    public IEnumerator CheckIfPatrolling()
+    {
+        yield return new WaitForSeconds(.1f);
+        if(target == null && agent.velocity == Vector3.zero)
+        {
+            isPatrolling = false;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("PlayerAttack"))
